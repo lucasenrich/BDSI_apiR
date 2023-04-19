@@ -25,6 +25,8 @@ function(p2r="", anio = 2021) {
   meuse_sf = st_intersection(meuse_sf,barrio) 
   
   pg = paste0(strsplit(p2r,'.tif')[[1]],'.geojson')
-  st_write(meuse_sf,pg)
+  st_write(meuse_sf,pg, append = F)
   list(msg = pg)
 }
+
+
